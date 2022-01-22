@@ -1,0 +1,6 @@
+*.DS_Store
+
+sol_ex_digit.txt
+sol_weights.txt
+
+**/MNIST/raw/
