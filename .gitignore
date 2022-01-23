@@ -1,6 +1,3 @@
 *.DS_Store
-
 **/MNIST/raw/
-
-sol_ex_digit.txt
-sol_weights.txt
+mnist8x8nn/.ipynb_checkpoints/train-checkpoint.ipynb
