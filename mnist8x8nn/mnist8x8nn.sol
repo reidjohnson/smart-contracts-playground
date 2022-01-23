@@ -254,7 +254,7 @@ contract MNIST8x8NeuralNet {
         ]
     ];
 
-    int128[][][][] default_conv1_weights = [
+    int128[][][][] default_conv1_weight = [
         [[
             [int128(-213),   79,  176,  -10,  -78],
             [int128(-419),  103,  282,  -50,  201],
@@ -285,12 +285,12 @@ contract MNIST8x8NeuralNet {
         ]]
     ];
 
-    int128[] default_conv1_biases = [int128(118),  63, 206, -96];
+    int128[] default_conv1_bias = [int128(118),  63, 206, -96];
 
-    int128[][] default_fc1_weights = [
+    int128[][] default_fc1_weight = [
         [int128(-383),  193,  653, -350,  -85,  190, -201, -272,  150,  -84,  -63, -120, -277,   42, -101,  325],
         [int128(-429),    8, -141,  408,  172, -771, -116, -441,  322,  649,  478,  102,  237, -357,  369, -396],
-        [int128(-317), -187, -122,   46,  568,  102,  118,  184,   36,  -96,  -10,  -59,  333,   94,  -52,   47],
+        [int128(-317), -187, -122,   46,  568,  102,  118,  184,   36,  -96,  -10,  -59,  334,   94,  -52,   47],
         [int128(  98),  270, -432,  101,  378,  151,   37,  296, -110, -309, -153, -243,  367, -128, -282,  446],
         [int128( 284),   12,  -75,   15, -289, -337,  485, -232, -254, -507,  208,  -40, -187,  315,  201, -398],
         [int128( 281),  145, -185, -174,    6,   41,  -80,  174, -139,  487,  -84,  -13, -157,  174, -243,  380],
@@ -300,17 +300,17 @@ contract MNIST8x8NeuralNet {
         [int128( 320),  115, -159,  -22, -257,  465,  222,  -48,  -76, -412,  142,  -16, -313,   11,  238, -280]
     ];
 
-    int128[] default_fc1_biases = [int128(-114), -104,  -49,   83,  209,  105,   22,  -96, -116,  -62];
+    int128[] default_fc1_bias = [int128(-114), -104,  -49,   83,  209,  105,   22,  -96, -116,  -62];
 
     function default_predict_proba(
         int128[][][] memory image
     ) public view returns (int128[] memory) {
         return predict_proba(
             image,
-            default_conv1_weights,
-            default_conv1_biases,
-            default_fc1_weights,
-            default_fc1_biases
+            default_conv1_weight,
+            default_conv1_bias,
+            default_fc1_weight,
+            default_fc1_bias
         );
     }
 
@@ -319,10 +319,10 @@ contract MNIST8x8NeuralNet {
     ) public view returns (uint) {
         return predict(
             image,
-            default_conv1_weights,
-            default_conv1_biases,
-            default_fc1_weights,
-            default_fc1_biases
+            default_conv1_weight,
+            default_conv1_bias,
+            default_fc1_weight,
+            default_fc1_bias
         );
     }
 
